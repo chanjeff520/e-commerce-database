@@ -15,20 +15,6 @@ Tag.init(
     },
     tag_name:{
       types: DataTypes.STRING
-    },
-    product_id: {
-      types: DataTypes.INTEGER,
-      refreences: {
-        model: 'prodcut',
-        key: 'id'
-      }
-    },
-    tag_id: {
-      types: DataTypes.INTEGER,
-      refreences: {
-        model: 'tag',
-        key: 'id'
-      }
     }
   },
   {
