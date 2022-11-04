@@ -23,6 +23,7 @@ Product.belongsToMany(Tag, {
     unique: false
   }
 })
+
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
   through: {
