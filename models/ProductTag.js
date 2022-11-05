@@ -4,15 +4,17 @@ const sequelize = require('../config/connection');
 
 class ProductTag extends Model {}
 
+// used as a reference table between our product and tag with many-to-many relationship
 ProductTag.init(
   {
-    // define columns
+    //id of the Product Tag
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
+    //id of the product
     product_id: {
       type: DataTypes.INTEGER,
       refreences: {
@@ -20,6 +22,7 @@ ProductTag.init(
         key: 'id',
       }
     },
+    //id of the tag
     tag_id: {
       type: DataTypes.INTEGER,
       references: {
